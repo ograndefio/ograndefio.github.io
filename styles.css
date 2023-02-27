@@ -1,4 +1,4 @@
-body        {background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(29, 29, 29) 7%)}
+body        {background-image: url(background_png.png);}
 
 .circleB    {border: 2px dashed white;
             border-radius: 50%;
@@ -19,7 +19,6 @@ body        {background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(29, 29, 29
     to   {transform: rotate(360deg);}
 }
 
-
 h1          {color: white; 
             font-family: 'Roboto Mono', serif;
             font-size: 20px;
@@ -28,4 +27,28 @@ h1          {color: white;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            filter:drop-shadow(0px 0px 3px grey) }
+            filter:drop-shadow(0px 0px 3px grey);
+            transition: ease-in-out 3s;}
+
+h1:hover    {animation: flicker .5s infinite}
+
+@keyframes flicker{
+    0% {opacity: 0;}
+    20% {opacity: 0.7;}
+    45% {opacity: 1;}
+    70% {opacity: 0;}
+    90% {opacity: 0.3;}
+    100% {opacity: 1;}
+}
+
+.oFio       {color:red;
+            filter:drop-shadow(0px 0px 3px red)}
+
+
+p          {color: white;
+           font-size: small;
+           text-align: center;
+           top: 50%;
+           left: 50%;
+           
+        }
