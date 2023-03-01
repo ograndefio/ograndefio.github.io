@@ -1,54 +1,73 @@
-body        {background-image: url(background_png.png);}
+/* MEDIA QUERIES (NOT USED) */
+@media (max-width: 576px) {}
+@media (min-width: 576px) and (max-width: 768px) {}
+@media (min-width: 768px) and (max-width: 992px) {}
 
-.circleB    {border: 2px dashed white;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0);
-            width: 470px;
-            height: 470px;
-            text-align: center;
-            line-height: 100px;
-            position: fixed;
-            top: 30%;
-            left: 37%;
-            transform: translate(-50%, -50%);}
-
-.circleB:first-child{animation: rot infinite linear 2s;}
-
-@keyframes rot{
-    from {transform: rotate(0deg);}
-    to   {transform: rotate(360deg);}
+/* KEYFRAMES */
+@keyframes rot{ /* makes the circle spin */
+    from {
+    transform: rotate(0deg);
+}
+    to   {
+    transform: rotate(360deg);
+}
 }
 
-h1          {color: white; 
-            font-family: 'Roboto Mono', serif;
-            font-size: 20px;
-            text-align: center; 
-            position: fixed; 
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            filter:drop-shadow(0px 0px 3px grey);
-            transition: ease-in-out 3s;}
+/* GRID OPTIONS - tudo aqui embaixo é referente somente a grid*/
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
 
-h1:hover    {animation: flicker .5s infinite}
-
-@keyframes flicker{
-    0% {opacity: 0;}
-    20% {opacity: 0.7;}
-    45% {opacity: 1;}
-    70% {opacity: 0;}
-    90% {opacity: 0.3;}
-    100% {opacity: 1;}
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "a b c"
+    "d e f"
+    "g h i";
+  }
+  
+.e { 
+    grid-area: e;
+    float: left;
 }
 
-.oFio       {color:red;
-            filter:drop-shadow(0px 0px 3px red)}
+/* OUTROS RULESETS DA PÁGINA */
+body {
+    background-image: url(background_png.png);
+}
 
+h1 {
+    color: white; 
+    font-family: 'Roboto Mono', serif;
+    font-size: 20px;
+    text-align: center; 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter:drop-shadow(0px 0px 3px grey);
+    transition: ease-in-out 3s;
+}
 
-p          {color: white;
-           font-size: small;
-           text-align: center;
-           top: 50%;
-           left: 50%;
-           
-        }
+/* CLASSES */
+.oFio {
+    color:red;
+    filter:drop-shadow(0px 0px 3px red)
+}
+
+.circleB {
+    animation: rot infinite linear 2s;
+}
+
+.center { 
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+}
