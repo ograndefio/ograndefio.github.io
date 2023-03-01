@@ -21,6 +21,7 @@
     right: 0;
     bottom: 0;
     justify-content: center;
+    align-items: center;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -43,18 +44,7 @@ body {
     background-image: url(background_png.png);
 }
 
-h1 {
-    color: white; 
-    font-family: 'Roboto Mono', serif;
-    font-size: 20px;
-    text-align: center; 
-    position: fixed; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    filter:drop-shadow(0px 0px 3px grey);
-    transition: ease-in-out 3s;
-}
+
 
 /* CLASSES */
 .oFio {
@@ -70,4 +60,39 @@ h1 {
     display: grid;
     margin-left: auto;
     margin-right: auto;
+}
+
+.mainTitle{
+    font-size: 20px;
+    text-align: center; 
+    position: fixed; 
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white; 
+    font-family: 'Roboto Mono', serif;
+    filter:drop-shadow(0px 0px 3px grey);
+    transition: ease-in-out 3s
+}
+
+.mainText {
+    color: white; 
+    font-family: 'Roboto Mono', serif;
+    filter:drop-shadow(0px 0px 3px grey);
+    transition: ease-in-out 3s;
+}
+
+
+.sections {
+    background-color: rgb(41, 40, 40);
+    border: 1px none black;
+    margin: 5px 180px 0px 180px;
+    padding: 1px 20px 1px 20px;
+    text-align: center;
+}
+
+.sectionContent{
+    text-align: justify;
+    line-height: 1;
 }
