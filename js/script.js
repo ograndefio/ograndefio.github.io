@@ -9,12 +9,12 @@ var player;
 function onYoutubeIframeAPIReady(){
 player = new YT.player('player',{
     height: '360',
-    width: '640',
+    width: '480',
     videoId: 'oowBXzfcl90',
-    events: {
+    playerVars: {'mute': 0, 'autoplay': 1},
+    events: {  
         'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
+        'onStateChange': onPlayerStateChange }
     });
 }
 
