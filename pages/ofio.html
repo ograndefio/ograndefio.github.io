@@ -6,26 +6,22 @@
 
     <script>
         var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
 
+        tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
         var player;
-    function onYouTubePlayerAPIReady() {
+        function onYouTubePlayerAPIReady() {
         player = new YT.Player('player', {
-           height: '0',
-           width: '0',
-           videoId: 'OyDyOweu-PA',
-           playerVars:{
-            'mute' : 0,
-            'autoplay': 1,
-            'origin': 'http://localhost:8100' 
-        },
+           height: '600',
+           width: '600',
+           videoId: 'cReuQk0pJbI',
+           playerVars:{'mute' : 0,'autoplay':1},
            events: {  }
         });
     }
-
+        
 
       function onPlayerReady(event) {
         event.target.playVideo();
@@ -41,6 +37,7 @@
       function stopVideo() {
         player.stopVideo();
       }
+      
     </script>
 
     <title>O FIO</title>
@@ -92,7 +89,6 @@
         <br>
 
         <div id="player"></div>
-    
 </body>
 
 </html>
