@@ -44,7 +44,11 @@ body {
     background-image: url(../images/background_png.png);
 }
 
-
+/* remove toda formatação padrão de hyperlink, menos o cursor */
+a {
+    all:unset;
+    cursor: pointer;
+}
 
 /* CLASSES */
 .oFio {
