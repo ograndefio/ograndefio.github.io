@@ -41,7 +41,7 @@
 
 /* OUTROS RULESETS DA PÁGINA */
 body {
-    background-image: url(../images/background_png.png);
+    background-image: url(../media/background_png.png);
 }
 
 /* remove toda formatação padrão de hyperlink, menos o cursor */
