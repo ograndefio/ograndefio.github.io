@@ -1,13 +1,13 @@
 let player;
-let videoId = "gRwgNC6R9-c"
-l
+let lightLockId = "gRwgNC6R9-c"
+let videoNeocities = 'cReuQk0pJbI'
 function onYouTubeIframeAPIReady() {
     console.log('api loaded')
 
     player = new YT.Player("player", {
-        height: 0,
-        width: 0,
-        videoId: videoId,
+        height: 0.0001,
+        width: 0.0001,
+        videoId: lightLockId,
         playerVars: { 'mute': 0, 'autoplay': 1 },
         events: {}
     })
