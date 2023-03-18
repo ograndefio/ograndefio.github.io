@@ -20,12 +20,14 @@ switch(fileName[0]){
         break
 }
 
+console.log(videoId)
+
 function onYouTubeIframeAPIReady() {
     console.log('api loaded')
 
     player = new YT.Player("player", {
-        height: 0.0001,
-        width: 0.0001,
+        height: 100,
+        width: 100,
         videoId: videoId,
         playerVars: { 'mute': 0, 'autoplay': 1 },
         events: {}
